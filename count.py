@@ -8,9 +8,9 @@ print("Processing file:", filename)
 with open(filename) as csvfile:
     csvreader = csv.reader(csvfile)
     for line in csvreader:
-        if line[7] == "DENY":
+        if "DENY" in line:
             deny_count += 1
-        elif line[7] == "ACCEPT":
+        elif "ACCEPT" in line:
             accept_count += 1
 
 print(f"Total DENY entries: {deny_count}")
