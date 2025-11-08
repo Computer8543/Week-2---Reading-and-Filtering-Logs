@@ -6,14 +6,11 @@ IP_POSITION = 1  # Assuming the IP address is in the second column (index 1)
 # Set up list limit for unique IPs
 LIST_LIMIT = 5
 
-# Initialize
-deny_count = 0
-
 # Create a set to hold unique IP addresses
 ip_set = set()
 
 # Create a dictionary to hold DENY counts per IP address
-ip_deny_count_dictionary = {ip_set: deny_count for ip_set in ip_set}
+ip_deny_count_dictionary = {ip_set: 0 for ip_set in ip_set}
 
 # Process the file
 print("Processing file:", filename)
