@@ -23,8 +23,7 @@ with open(filename) as csvfile:
         if "DENY" in line:
             if line[IP_POSITION] not in ip_set:
                 ip_set.add(line[IP_POSITION])
-                deny_count = 1
-                ip_deny_count_dictionary[line[IP_POSITION]] = deny_count
+                ip_deny_count_dictionary[line[IP_POSITION]] = 1
             else:
                 ip_deny_count_dictionary[line[IP_POSITION]] += 1
 
